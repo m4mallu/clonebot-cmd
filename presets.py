@@ -2,9 +2,9 @@
 class Presets(object):
     WELCOME_TEXT = "Hello.. <b>{}</b>\n<code>I can copy your entire messages from one chat to another ! Try</code>\n" \
                    " /help <code>for how to use the bot.</code>\n\n<b>My Author is: " \
-                   "</b><a href='https://t.me/space4renjith'>                HERE</a>\n" \
+                   "</b><a href='https://t.me/space4renjith'>                 HERE</a>\n" \
                    "<b>My code can be seen: </b><a href='https://github.com/m4mallu/clonebot'> HERE</a>"
-    HELP_TEXT = """𝙃𝙚𝙡𝙡𝙤.. 𝙄'𝙢 𝘾𝙡𝙤𝙣𝙚 𝘽𝙤𝙩
+    HELP_TEXT = """<a href='https://github.com/m4mallu/clonebot'>𝙃𝙚𝙡𝙡𝙤.. 𝙄'𝙢 𝘾𝙡𝙤𝙣𝙚 𝘽𝙤𝙩</a>
 
 ɪ ᴄᴀɴ ᴄʟᴏɴᴇ ᴍᴇᴅɪᴀꜱ ꜰʀᴏᴍ ᴏɴᴇ ᴄʜᴀᴛ ᴛᴏ ᴀɴᴏᴛʜᴇʀ
 
@@ -46,12 +46,10 @@ class Presets(object):
                                      "privileges.</b>"
     COPIED_MESSAGES = "<b><a href='https://github.com/m4mallu/clonebot'>Medias Copied</a></b>"
     FILE_TYPES = ["document", "video", "audio"]
-    ERROR_TEXT = "⛔️<b>Access Denied</b> ⛔\n\n<code>Check.. Bot is an admin of the Source Chat</code>"
-    COPY_ERROR_TEXT = "⛔️<b>Access Denied</b> ⛔\n\n<code>Check.. Bot or string session owner is not an"\
-                      " admin of the configured Chats</code> 🤷"
+    COPY_ERROR_TEXT = "⛔ ️𝘼𝙘𝙘𝙚𝙨𝙨 𝘿𝙚𝙣𝙞𝙚𝙙 ⛔\n\n𝐂𝐡𝐞𝐜𝐤.. 𝐁𝐨𝐭 𝐢𝐬 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧 𝐨𝐟 𝐭𝐡𝐞 𝐜𝐡𝐚𝐭𝐬 𝐰𝐢𝐭𝐡 𝐚𝐥𝐥 𝐚𝐝𝐦𝐢𝐧 𝐩𝐫𝐢𝐯𝐢𝐥𝐞𝐠𝐞𝐬 ❗️"
     INITIAL_MESSAGE_TEXT = "🔎 𝐋𝐨𝐨𝐤𝐢𝐧𝐠 𝐟𝐨𝐫 𝐌𝐞𝐝𝐢𝐚𝐬 🔎"
-    SOURCE_CONFIRM = "⚙️ 𝐒𝐨𝐮𝐫𝐜𝐞 𝐜𝐡𝐚𝐭 𝐈𝐝 ⚙\n\n👉 <code>{}</code>\n\n𝐒𝐚𝐯𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 ✅"
-    DESTINATION_CONFIRM = "⚙️ 𝐃𝐞𝐬𝐭𝐢𝐧𝐚𝐭𝐢𝐨𝐧 𝐜𝐡𝐚𝐭 𝐈𝐝 ⚙\n\n👉 <code>{}</code>\n\n𝐒𝐚𝐯𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 ✅"
+    SOURCE_CONFIRM = "𝐒𝐨𝐮𝐫𝐜𝐞 𝐜𝐡𝐚𝐭 𝐈𝐝 👉 <code>{}</code>\n\n𝐒𝐚𝐯𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 ✅"
+    DESTINATION_CONFIRM = "𝐓𝐚𝐫𝐠𝐞𝐭 𝐜𝐡𝐚𝐭 𝐈𝐝 👉 <code>{}</code>\n\n𝐒𝐚𝐯𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 ✅"
     VIEW_CONF = "⚙️ 𝐘𝐨𝐮𝐫 𝐛𝐨𝐭 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧𝐬 ⚙️\n\n🍾 𝐒𝐨𝐮𝐫𝐜𝐞 𝐈𝐝         : <code>{}</code>\n🎯 𝐃𝐞𝐬𝐭𝐢𝐧𝐚𝐭𝐢𝐨𝐧 𝐈𝐝 : " \
                 "<code>{}</code>"
     NOT_CONFIGURED = "𝐍𝐨 𝐜𝐡𝐚𝐭 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧 𝐟𝐨𝐮𝐧𝐝 ⚠ \n\n𝐓𝐫𝐲 : <b>/help</b>"

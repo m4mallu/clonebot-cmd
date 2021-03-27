@@ -8,8 +8,7 @@ from init import source_chat, destination_chat
 
 @Bot.on_message(filters.private & filters.command('start'))
 async def start_bot(client: Bot, message: Message):
-    await client.send_message(
-        chat_id=message.chat.id,
+    await message.reply_text(
         text=Presets.WELCOME_TEXT.format(message.from_user.first_name),
         parse_mode='html',
         disable_web_page_preview=True
@@ -18,8 +17,7 @@ async def start_bot(client: Bot, message: Message):
 
 @Bot.on_message(filters.private & filters.command('help'))
 async def help_me(client: Bot, message: Message):
-    await client.send_message(
-        chat_id=message.chat.id,
+    await message.reply_text(
         text=Presets.HELP_TEXT,
         parse_mode='html',
         disable_web_page_preview=True
@@ -33,8 +31,7 @@ async def set_source(client: Bot, message: Message):
         source_chat_id = message.text.split(" ")[1]
         if str(source_chat_id).startswith('-100') and source_chat_id[1:].isdigit():
             source_chat[ID] = int(source_chat_id)
-            await client.send_message(
-                chat_id=message.chat.id,
+            await message.reply_text(
                 text=Presets.SOURCE_CONFIRM.format(source_chat_id)
             )
         else:
@@ -56,8 +53,7 @@ async def set_destination(client: Bot, message: Message):
         destination_chat_id = message.text.split(" ")[1]
         if str(destination_chat_id).startswith('-100') and destination_chat_id[1:].isdigit():
             destination_chat[ID] = int(destination_chat_id)
-            await client.send_message(
-                chat_id=message.chat.id,
+            await message.reply_text(
                 text=Presets.DESTINATION_CONFIRM.format(destination_chat_id)
             )
         else:
@@ -76,9 +72,9 @@ async def set_destination(client: Bot, message: Message):
 async def view(client: Bot, message: Message):
     ID = int(message.from_user.id)
     if ID in source_chat and destination_chat:
-        await client.send_message(
-            chat_id=message.chat.id,
-            text=Presets.VIEW_CONF.format(source_chat[ID], destination_chat[ID])
+        await message.reply_text(
+            text=Presets.VIEW_CONF.format(source_chat[ID], destination_chat[ID]),
+            reply_to_message_id=message.message_id
         )
     else:
         await message.reply_text(

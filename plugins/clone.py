@@ -82,6 +82,9 @@ async def clone_medias(client: Bot, message: Message):
                             text=Presets.COPY_ERROR_TEXT,
                             reply_to_message_id=message.message_id
                         )
+                        await status_message.delete()
+                        source_chat.pop(ID)
+                        destination_chat.pop(ID)
                         return
     else:
         await message.reply_text(
