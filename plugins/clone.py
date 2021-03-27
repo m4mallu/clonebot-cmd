@@ -1,3 +1,4 @@
+#----------------------------------- https://github.com/m4mallu/clonebot --------------------------------------------#
 import time
 from bot import Bot
 from presets import Presets

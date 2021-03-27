@@ -1,3 +1,4 @@
+#----------------------------------- https://github.com/m4mallu/clonebot --------------------------------------------#
 class Presets(object):
     WELCOME_TEXT = "Hello.. <b>{}</b>\n<code>I can copy your entire messages from one chat to another ! Try</code>\n" \
                    " /help <code>for how to use the bot.</code>\n\n<b>My Author is: " \

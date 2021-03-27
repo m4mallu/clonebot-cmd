@@ -1,4 +1,4 @@
-#----------------------------------- https://github.com/m4mallu/gofilesbot --------------------------------------------#
+#----------------------------------- https://github.com/m4mallu/clonebot --------------------------------------------#
 import os
 
 from pyrogram import Client

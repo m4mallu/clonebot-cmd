@@ -1,4 +1,4 @@
-
+#----------------------------------- https://github.com/m4mallu/clonebot --------------------------------------------#
 from bot import Bot
 from pyrogram.types import Message
 from pyrogram.errors import InviteHashExpired, InviteHashInvalid, UserAlreadyParticipant
