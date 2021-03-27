@@ -1,6 +1,6 @@
-#[Clone Bot](https://github.com/m4mallu/clonebot)
+# [Clone Bot](https://github.com/m4mallu/clonebot)
 
-####A simple telegram bot to clone Medias from one chat to another
+#### A simple telegram bot to clone Medias from one chat to another
 
 Note: 
 - Bot need to be an admin of the source and destination Chats.
