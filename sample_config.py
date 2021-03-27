@@ -9,7 +9,7 @@ logging.basicConfig(
     datefmt='%d-%b-%y %H:%M:%S',
     handlers=[
         RotatingFileHandler(
-            "gofilesbot.txt",
+            "clonebot.txt",
             maxBytes=50000000,
             backupCount=10
         ),

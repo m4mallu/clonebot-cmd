@@ -15,7 +15,7 @@ async def clone_medias(client: Bot, message: Message):
     document = {f'{ID}': 0}
     video = {f'{ID}': 0}
     audio = {f'{ID}': 0}
-    if source_chat.keys() and destination_chat.keys():
+    if ID in source_chat and destination_chat:
         try:
             status_message = await client.send_message(
                 chat_id=source_chat[ID],

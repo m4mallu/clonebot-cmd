@@ -38,7 +38,7 @@ class Presets(object):
 𝐭𝐡𝐞 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧𝐬 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐫𝐞𝐬𝐞𝐭 𝐭𝐨 𝐝𝐞𝐟𝐚𝐮𝐥𝐭𝐬 𝐭𝐨 𝐚𝐯𝐨𝐢𝐝 𝐦𝐞𝐝𝐢𝐚 𝐝𝐮𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧.
     
     """
-    MESSAGE_COUNT = "<b>𝗬𝗼𝘂'𝘃𝗲 𝗰𝗼𝗽𝗶𝗲𝗱 : </b>\n\n📚 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭𝐬 <b>: {}</b>\n🎞 𝐕𝐢𝐝𝐞𝐨𝐬         <b>: {}</b>\n" \
+    MESSAGE_COUNT = "𝗬𝗼𝘂'𝘃𝗲 𝗰𝗼𝗽𝗶𝗲𝗱 : \n\n📚 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭𝐬 <b>: {}</b>\n🎞 𝐕𝐢𝐝𝐞𝐨𝐬         <b>: {}</b>\n" \
                     "🔊 𝐀𝐮𝐝𝐢𝐨𝐬         <b>: {}</b>\n\n<code>Be patient, You will get a confirmation when" \
                     " finished !</code>"
     COPYING_MESSAGES = "<b>Copying Medias...</b>"
@@ -49,13 +49,13 @@ class Presets(object):
     ERROR_TEXT = "⛔️<b>Access Denied</b> ⛔\n\n<code>Check.. Bot is an admin of the Source Chat</code>"
     COPY_ERROR_TEXT = "⛔️<b>Access Denied</b> ⛔\n\n<code>Check.. Bot or string session owner is not an"\
                       " admin of the configured Chats</code> 🤷"
-    INITIAL_MESSAGE_TEXT = "🔎 <b>Looking for Messages</b> 🔎"
+    INITIAL_MESSAGE_TEXT = "🔎 𝐋𝐨𝐨𝐤𝐢𝐧𝐠 𝐟𝐨𝐫 𝐌𝐞𝐝𝐢𝐚𝐬 🔎"
     SOURCE_CONFIRM = "⚙️ 𝐒𝐨𝐮𝐫𝐜𝐞 𝐜𝐡𝐚𝐭 𝐈𝐝 ⚙\n\n👉 <code>{}</code>\n\n𝐒𝐚𝐯𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 ✅"
     DESTINATION_CONFIRM = "⚙️ 𝐃𝐞𝐬𝐭𝐢𝐧𝐚𝐭𝐢𝐨𝐧 𝐜𝐡𝐚𝐭 𝐈𝐝 ⚙\n\n👉 <code>{}</code>\n\n𝐒𝐚𝐯𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 ✅"
     VIEW_CONF = "⚙️ 𝐘𝐨𝐮𝐫 𝐛𝐨𝐭 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧𝐬 ⚙️\n\n🍾 𝐒𝐨𝐮𝐫𝐜𝐞 𝐈𝐝         : <code>{}</code>\n🎯 𝐃𝐞𝐬𝐭𝐢𝐧𝐚𝐭𝐢𝐨𝐧 𝐈𝐝 : " \
                 "<code>{}</code>"
     NOT_CONFIGURED = "𝐍𝐨 𝐜𝐡𝐚𝐭 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧 𝐟𝐨𝐮𝐧𝐝 ⚠ \n\n𝐓𝐫𝐲 : <b>/help</b>"
     TRY_HELP = "𝐓𝐫𝐲 : /help\n\n𝐓𝐨 𝐤𝐧𝐨𝐰 𝐛𝐞𝐭𝐭𝐞𝐫 𝐮𝐬𝐞 𝐨𝐟 𝐭𝐡𝐢𝐬 𝐛𝐨𝐭 🤷"
-    FINISHED_TEXT = "𝐂𝐨𝐧𝐠𝐫𝐚𝐭𝐮𝐥𝐚𝐭𝐢𝐨𝐧𝐬 🥂\n\n𝐌𝐞𝐝𝐢𝐚𝐬 𝐜𝐨𝐩𝐢𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 ✅"
+    FINISHED_TEXT = "𝐂𝐨𝐧𝐠𝐫𝐚𝐭𝐮𝐥𝐚𝐭𝐢𝐨𝐧𝐬 🥂\n\n𝐌𝐞𝐝𝐢𝐚𝐬 𝐜𝐥𝐨𝐧𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 ✅"
     INVALID_CHAT_ID = "𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐜𝐡𝐚𝐭 𝐩𝐚𝐫𝐚𝐦𝐞𝐭𝐞𝐫 𝐟𝐨𝐮𝐧𝐝 🤷"
     CLEAR_CONFIG = "𝐂𝐡𝐚𝐭 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧𝐬:\n\n𝐂𝐥𝐞𝐚𝐫𝐞𝐝 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 ✅"
