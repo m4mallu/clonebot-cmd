@@ -64,6 +64,7 @@ async def clone_medias(client: Bot, message: Message):
                             text=Presets.MESSAGE_COUNT.format(document[f'{ID}'], video[f'{ID}'], audio[f'{ID}']),
                             message_id=msg.message_id
                         )
+                        time.sleep(2)
                     except FloodWait as e:
                         time.sleep(e.x)
                     try:
@@ -76,7 +77,6 @@ async def clone_medias(client: Bot, message: Message):
                         )
                     except FloodWait as e:
                         time.sleep(e.x)
-                        time.sleep(60)
                     except Exception:
                         await client.send_message(
                             chat_id=message.chat.id,
