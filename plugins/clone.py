@@ -13,7 +13,7 @@ BOT_START_TIME = time.time()
 @Bot.on_message(filters.private & filters.command('clone'))
 async def clone_medias(client: Bot, message: Message):
     CLONE_START_TIME = time.time()
-    time = datetime.datetime.now(pytz.timezone('Asia/Kolkata')).strftime('%I:%M:%S %p')
+    currenttime = datetime.datetime.now(pytz.timezone('Asia/Kolkata')).strftime('%I:%M:%S %p')
     ID = int(message.from_user.id)
     document = {f'{ID}': 0}
     video = {f'{ID}': 0}
@@ -67,7 +67,7 @@ async def clone_medias(client: Bot, message: Message):
                     try:
                         await client.edit_message_text(
                             chat_id=message.chat.id,
-                            text=Presets.MESSAGE_COUNT.format(document[f'{ID}'], video[f'{ID}'], audio[f'{ID}'],time,timetaken,uptime,update),
+                            text=Presets.MESSAGE_COUNT.format(document[f'{ID}'], video[f'{ID}'], audio[f'{ID}'],currenttime,timetaken,uptime,update),
                             message_id=msg.message_id
                         )
                         time.sleep(2)
