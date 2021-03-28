@@ -39,7 +39,7 @@ class Presets(object):
     
     """
     MESSAGE_COUNT = "𝗬𝗼𝘂'𝘃𝗲 𝗰𝗼𝗽𝗶𝗲𝗱 : \n\n📚 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭𝐬 <b>  : {}</b>\n🎞 𝐕𝐢𝐝𝐞𝐨𝐬         <b>  : {}</b>\n" \
-                    "🔊 𝐀𝐮𝐝𝐢𝐨𝐬         <b>  : {}</b>\n\n📲𝐂𝐥𝐨𝐧𝐞 𝐒𝐭𝐚𝐫𝐭𝐞𝐝 𝐀𝐭  <b>: {}</b>\n⏳ 𝐓𝐢𝐦𝐞 𝐓𝐚𝐤𝐞𝐧  <b>: {}</b>\n🆙 𝐁𝐨𝐭 𝐔𝐩𝐭𝐢𝐦𝐞  <b> : {}</b>\n📌 𝐋𝐚𝐬𝐭 𝐔𝐩𝐝𝐚𝐭𝐞𝐝 𝐎𝐧  <b> : {}</b>\n\n<code>Be patient, You will get a confirmation when" \
+                    "🔊 𝐀𝐮𝐝𝐢𝐨𝐬         <b>  : {}</b>\n\n📲𝐂𝐥𝐨𝐧𝐞 𝐒𝐭𝐚𝐫𝐭𝐞𝐝 𝐀𝐭  <b>   : {}</b>\n⏳ 𝐓𝐢𝐦𝐞 𝐓𝐚𝐤𝐞𝐧  <b>          : {}</b>\n🆙 𝐁𝐨𝐭 𝐔𝐩𝐭𝐢𝐦𝐞  <b>           : {}</b>\n📌 𝐋𝐚𝐬𝐭 𝐔𝐩𝐝𝐚𝐭𝐞𝐝 𝐎𝐧  <b> : {}</b>\n\n<code>Be patient, You will get a confirmation when" \
                     " finished !</code>"
     COPYING_MESSAGES = "<b>Copying Medias...</b>"
     IN_CORRECT_PERMISSIONS_MESSAGE = "something went wrong.\n\n<code>{}</code>\n\n</b>Make sure, Bot Needs all Admin " \
