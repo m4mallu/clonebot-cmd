@@ -11,6 +11,7 @@ from helper.make_user_join_chat import make_chat_user_join
 
 @Bot.on_message(filters.private & filters.command('clone'))
 async def clone_medias(client: Bot, message: Message):
+    CLONE_START_TIME = time.time()
     ID = int(message.from_user.id)
     document = {f'{ID}': 0}
     video = {f'{ID}': 0}
@@ -49,6 +50,7 @@ async def clone_medias(client: Bot, message: Message):
                 user_message.message_id,
                 replies=0,
             )
+            timetaken = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - CLONE_START_TIME))
             for file_type in tuple(Presets.FILE_TYPES):
                 media = getattr(messages, file_type, None)
                 if media is not None:
@@ -61,7 +63,7 @@ async def clone_medias(client: Bot, message: Message):
                     try:
                         await client.edit_message_text(
                             chat_id=message.chat.id,
-                            text=Presets.MESSAGE_COUNT.format(document[f'{ID}'], video[f'{ID}'], audio[f'{ID}']),
+                            text=Presets.MESSAGE_COUNT.format(document[f'{ID}'], video[f'{ID}'], audio[f'{ID}'],timetaken),
                             message_id=msg.message_id
                         )
                         time.sleep(2)
