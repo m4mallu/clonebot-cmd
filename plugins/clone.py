@@ -67,7 +67,7 @@ async def clone_medias(client: Bot, message: Message):
                     try:
                         await client.edit_message_text(
                             chat_id=message.chat.id,
-                            text=Presets.MESSAGE_COUNT.format(document[f'{ID}'], video[f'{ID}'], audio[f'{ID}'],currenttime,timetaken,uptime,update),
+                            text=Presets.MESSAGE_COUNT.format(document[f'{ID}'], video[f'{ID}'], audio[f'{ID}'],timetaken,uptime,currenttime,update),
                             message_id=msg.message_id
                         )
                         time.sleep(2)
