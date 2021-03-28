@@ -1,5 +1,6 @@
 #----------------------------------- https://github.com/m4mallu/clonebot --------------------------------------------#
 import time
+import datetime,pytz
 from bot import Bot
 from presets import Presets
 from pyrogram import filters
@@ -7,10 +8,12 @@ from pyrogram.types import Message
 from init import source_chat, destination_chat
 from pyrogram.errors import FloodWait, ChatAdminRequired
 from helper.make_user_join_chat import make_chat_user_join
-
+BOT_START_TIME = time.time()
 
 @Bot.on_message(filters.private & filters.command('clone'))
 async def clone_medias(client: Bot, message: Message):
+    CLONE_START_TIME = time.time()
+    currenttime = datetime.datetime.now(pytz.timezone('Asia/Kolkata')).strftime('%I:%M:%S %p')
     ID = int(message.from_user.id)
     document = {f'{ID}': 0}
     video = {f'{ID}': 0}
@@ -49,6 +52,9 @@ async def clone_medias(client: Bot, message: Message):
                 user_message.message_id,
                 replies=0,
             )
+            timetaken = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - CLONE_START_TIME))
+            uptime = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - BOT_START_TIME))
+            update = datetime.datetime.now(pytz.timezone('Asia/Kolkata')).strftime('%I:%M:%S %p')
             for file_type in tuple(Presets.FILE_TYPES):
                 media = getattr(messages, file_type, None)
                 if media is not None:
@@ -61,9 +67,10 @@ async def clone_medias(client: Bot, message: Message):
                     try:
                         await client.edit_message_text(
                             chat_id=message.chat.id,
-                            text=Presets.MESSAGE_COUNT.format(document[f'{ID}'], video[f'{ID}'], audio[f'{ID}']),
+                            text=Presets.MESSAGE_COUNT.format(document[f'{ID}'], video[f'{ID}'], audio[f'{ID}'],timetaken,uptime,currenttime,update),
                             message_id=msg.message_id
                         )
+                        time.sleep(2)
                     except FloodWait as e:
                         time.sleep(e.x)
                     try:
