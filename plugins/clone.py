@@ -76,6 +76,7 @@ async def clone_medias(client: Bot, message: Message):
                         )
                     except FloodWait as e:
                         time.sleep(e.x)
+                        time.sleep(60)
                     except Exception:
                         await client.send_message(
                             chat_id=message.chat.id,
