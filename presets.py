@@ -38,8 +38,8 @@ class Presets(object):
 𝐭𝐡𝐞 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧𝐬 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐫𝐞𝐬𝐞𝐭 𝐭𝐨 𝐝𝐞𝐟𝐚𝐮𝐥𝐭𝐬 𝐭𝐨 𝐚𝐯𝐨𝐢𝐝 𝐦𝐞𝐝𝐢𝐚 𝐝𝐮𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧.
     
     """
-    MESSAGE_COUNT = "𝗬𝗼𝘂'𝘃𝗲 𝗰𝗼𝗽𝗶𝗲𝗱 : \n\n📚 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭𝐬 <b>  : {}</b>\n🎞 𝐕𝐢𝐝𝐞𝐨𝐬         <b>   : {}</b>\n" \
-                    "🔊 𝐀𝐮𝐝𝐢𝐨𝐬         <b>  : {}</b>\n⏳ 𝐓𝐢𝐦𝐞 𝐓𝐚𝐤𝐞𝐧  <b>: {}</b>\n\n🆙 𝐁𝐨𝐭 𝐔𝐩𝐭𝐢𝐦𝐞  <b>: {}</b>\n<code>Be patient, You will get a confirmation when" \
+    MESSAGE_COUNT = "𝗬𝗼𝘂'𝘃𝗲 𝗰𝗼𝗽𝗶𝗲𝗱 : \n\n📚 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭𝐬 <b>  : {}</b>\n🎞 𝐕𝐢𝐝𝐞𝐨𝐬         <b>  : {}</b>\n" \
+                    "🔊 𝐀𝐮𝐝𝐢𝐨𝐬         <b>  : {}</b>\n⏳ 𝐓𝐢𝐦𝐞 𝐓𝐚𝐤𝐞𝐧  <b>: {}</b>\n🆙 𝐁𝐨𝐭 𝐔𝐩𝐭𝐢𝐦𝐞  <b> : {}</b>\n<code>Be patient, You will get a confirmation when" \
                     " finished !</code>"
     COPYING_MESSAGES = "<b>Copying Medias...</b>"
     IN_CORRECT_PERMISSIONS_MESSAGE = "something went wrong.\n\n<code>{}</code>\n\n</b>Make sure, Bot Needs all Admin " \
