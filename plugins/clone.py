@@ -7,7 +7,7 @@ from pyrogram.types import Message
 from init import source_chat, destination_chat
 from pyrogram.errors import FloodWait, ChatAdminRequired
 from helper.make_user_join_chat import make_chat_user_join
-
+BOT_START_TIME = time.time()
 
 @Bot.on_message(filters.private & filters.command('clone'))
 async def clone_medias(client: Bot, message: Message):
@@ -51,6 +51,7 @@ async def clone_medias(client: Bot, message: Message):
                 replies=0,
             )
             timetaken = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - CLONE_START_TIME))
+            uptime = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - BOT_START_TIME))
             for file_type in tuple(Presets.FILE_TYPES):
                 media = getattr(messages, file_type, None)
                 if media is not None:
@@ -63,7 +64,7 @@ async def clone_medias(client: Bot, message: Message):
                     try:
                         await client.edit_message_text(
                             chat_id=message.chat.id,
-                            text=Presets.MESSAGE_COUNT.format(document[f'{ID}'], video[f'{ID}'], audio[f'{ID}'],timetaken),
+                            text=Presets.MESSAGE_COUNT.format(document[f'{ID}'], video[f'{ID}'], audio[f'{ID}'],timetaken,uptime),
                             message_id=msg.message_id
                         )
                         time.sleep(2)
