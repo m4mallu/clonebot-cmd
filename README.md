@@ -6,27 +6,23 @@ Note:
 - Bot need to be an admin of the source and destination Chats.
 - String session user doesn't need to be an admin of both ends.
 - String session user should not be banned in the source chat.
+- Don't create the string session from an admin account. Session user will leave the chat at the end 😂 
 
 ### Requirements:
 ```
 TG_BOT_TOKEN    - Get from @BotFather
 APP_ID          - Get from my.telegram.org
 API_HASH        - Get from my.telegram.org
-TG_USER_SESSION - Run any userbot session maker(https://repl.it/@ayrahikari/pyrogram-session-maker)
+TG_USER_SESSION - Run any userbot session maker (https://repl.it/@ayrahikari/pyrogram-session-maker)
 ```
 
 ### @BotFather Command:
 ```
 /help - To know how to use the bot
-
 /source - Set source chat Id ( /source -1001234567890 )
-
 /destination - Set destination chat Id ( /destination -1009876543210)
-
 /view - To view the current stored chat configuration
-
 /delconfig - To clear the stored chat configuration
-
 /clone - Clone medias from source to destination chat
 
 ```
