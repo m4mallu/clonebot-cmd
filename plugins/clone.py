@@ -1,6 +1,7 @@
 #----------------------------------- https://github.com/m4mallu/clonebot --------------------------------------------#
 import time
 import pytz
+import asyncio
 import datetime
 from bot import Bot
 from presets import Presets
@@ -72,9 +73,8 @@ async def clone_medias(client: Bot, message: Message):
                                                               timetaken, uptime, currenttime, update),
                             message_id=msg.message_id
                         )
-                        time.sleep(2)
                     except FloodWait as e:
-                        time.sleep(e.x)
+                        await asyncio.sleep(e.x)
                     try:
                         await client.copy_message(
                             chat_id=destination_chat[ID],
@@ -84,7 +84,7 @@ async def clone_medias(client: Bot, message: Message):
                             disable_notification=True
                         )
                     except FloodWait as e:
-                        time.sleep(e.x)
+                        await asyncio.sleep(e.x)
                     except Exception:
                         await client.send_message(
                             chat_id=message.chat.id,
