@@ -51,17 +51,33 @@ virtualenv -p python3 venv
 pip3 install -r requirements.txt
 python3 main.py
 ```
+**Bot Window**
+<br>
+<img src="/med/bot_process.jpeg" width="200">
 
-### LICENSE
+**Working**
+<br>
+<img src="/med/working_video.gif" width="200">
 
-- [GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
+## LICENSE
+<p align="left">
+  <a href="https://choosealicense.com/licenses/gpl-3.0">
+    <img alt="GPL3" src ="https://e-tinet.com/wp-content/uploads/2017/02/logo-gnu-linux-GPL-2.png" width="104.75" height="32"/>
+  </a>
+</p>
+<br>
 
-### Credits:
+## Credits:
+<p align="left">
+  <a href="https://github.com/pyrogram/pyrogram">
+    <img alt="Pyrogram" src ="https://i.imgur.com/BOgY9ai.png" width="104.75" height="32"/>
+  </a>
+</p>
+<br>
 
-[DAN](https://t.me/haskell) for his [Pyrogram](https://github.com/pyrogram/pyrogram) Library
-
-[SpEcHiDe](https://github.com/SpEcHiDe) for his [DeleteMessagesRoBot](https://github.com/SpEcHiDe/DeleteMessagesRoBot)
-
-### Creator :
-
-[Mallu Boy](https://t.me/m4mallu) In Telegram - [AS](https://t.me/space4renjith)
+## Creator :
+<p align="left">
+  <a href="https://t.me/space4renjith">
+    <img alt="Renjith Mangal" src ="https://logodix.com/logo/1717728.jpg" width="150" />
+  </a>
+</p>
