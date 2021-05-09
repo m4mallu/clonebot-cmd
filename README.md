@@ -17,6 +17,8 @@ TG_USER_SESSION - Run any userbot session maker (https://repl.it/@ayrahikari/pyr
 ```
 
 ### @BotFather Command:
+**Should Be run in Bot**
+
 ```
 /help - To know how to use the bot
 /source - Set source chat Id ( /source -1001234567890 )
