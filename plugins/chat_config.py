@@ -18,7 +18,7 @@ async def start_bot(client: Bot, message: Message):
 @Bot.on_message(filters.private & filters.command('help'))
 async def help_me(client: Bot, message: Message):
     await message.reply_text(
-        text=Presets.HELP_TEXT,
+        text=Presets.HELP_TEXT.format(message.from_user.first_name),
         parse_mode='html',
         disable_web_page_preview=True
     )

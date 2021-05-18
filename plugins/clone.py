@@ -2,81 +2,94 @@
 import time
 import pytz
 import datetime
+import asyncio
 from bot import Bot
 from presets import Presets
 from pyrogram import filters
-from pyrogram.types import Message
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from init import source_chat, destination_chat
-from pyrogram.errors import FloodWait, ChatAdminRequired
-from helper.make_user_join_chat import make_chat_user_join
-BOT_START_TIME = time.time()
+from pyrogram.errors import FloodWait
+
+bot_start_time = time.time()
 
 @Bot.on_message(filters.private & filters.command('clone'))
 async def clone_medias(client: Bot, message: Message):
-    CLONE_START_TIME = time.time()
-    currenttime = datetime.datetime.now(pytz.timezone('Asia/Kolkata')).strftime('%I:%M:%S %p')
     ID = int(message.from_user.id)
-    document = {f'{ID}': 0}
-    video = {f'{ID}': 0}
-    audio = {f'{ID}': 0}
+
+    clone_start_time = time.time()
+    current_time = datetime.datetime.now(pytz.timezone('Asia/Kolkata')).strftime('%I:%M:%S %p')
+
+    doc_files = 0
+    video_files = 0
+    audio_files = 0
+
     if ID in source_chat and destination_chat:
-        try:
-            status_message = await client.send_message(
-                chat_id=source_chat[ID],
-                text=Presets.COPYING_MESSAGES
-            )
-        except ChatAdminRequired:
-            status_message = None
-        s__, nop = await make_chat_user_join(
-            client.USER,
-            status_message
-        )
-        if not s__:
-            if status_message:
-                await status_message.edit_text(
-                    Presets.IN_CORRECT_PERMISSIONS_MESSAGE.format(
-                        nop
-                    ),
-                    disable_web_page_preview=True
-                )
-            else:
-                await message.delete()
-            return
+        user_bot_me = await client.USER.get_me()
         msg = await client.send_message(
             chat_id=message.chat.id,
             text=Presets.INITIAL_MESSAGE_TEXT,
             disable_notification=True
         )
+        msg1 = await client.send_message(
+            chat_id=message.chat.id,
+            text=Presets.WAIT_MSG
+        )
+        # Checking string session user is in the given source chat id as self
+        try:
+            await client.USER.get_chat_member(chat_id=source_chat[ID], user_id=user_bot_me.id)
+        except Exception:
+            await msg1.delete()
+            await msg.edit(
+                text=Presets.IN_CORRECT_PERMISSIONS_MESSAGE,
+            )
+            source_chat.pop(ID)
+            destination_chat.pop(ID)
+            return
         async for user_message in client.USER.iter_history(source_chat[ID]):
-            messages = await client.get_messages(
+            messages = await client.USER.get_messages(
                 source_chat[ID],
                 user_message.message_id,
                 replies=0,
             )
-            timetaken = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - CLONE_START_TIME))
-            uptime = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - BOT_START_TIME))
+            time_taken = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - clone_start_time))
+            uptime = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - bot_start_time))
             update = datetime.datetime.now(pytz.timezone('Asia/Kolkata')).strftime('%I:%M:%S %p')
             for file_type in tuple(Presets.FILE_TYPES):
                 media = getattr(messages, file_type, None)
                 if media is not None:
                     if file_type == 'document':
-                        document[f'{ID}'] = document[f'{ID}'] + 1
+                        doc_files += 1
                     elif file_type == 'video':
-                        video[f'{ID}'] = video[f'{ID}'] + 1
+                        video_files += 1
                     elif file_type == 'audio':
-                        audio[f'{ID}'] = audio[f'{ID}'] + 1
+                        audio_files += 1
+                    else:
+                        pass
                     try:
-                        await client.edit_message_text(
-                            chat_id=message.chat.id,
-                            text=Presets.MESSAGE_COUNT.format(document[f'{ID}'], video[f'{ID}'], audio[f'{ID}'],
-                                                              timetaken, uptime, currenttime, update),
-                            message_id=msg.message_id
+                        await msg.edit(
+                            text=Presets.MESSAGE_COUNT.format(
+                                doc_files,
+                                video_files,
+                                audio_files,
+                                time_taken,
+                                uptime,
+                                current_time,
+                                update
+                            )
                         )
-                        time.sleep(2)
+                        await msg1.edit(
+                            text=Presets.CLOSE_BTN_TXT,
+                            reply_markup=InlineKeyboardMarkup(
+                                [[InlineKeyboardButton(text="🌀 CANCEL 🌀", callback_data="stop_clone")]]
+                            )
+                        )
+                        await asyncio.sleep(1)
                     except FloodWait as e:
-                        time.sleep(e.x)
+                        await asyncio.sleep(e.x)
+                    except Exception:
+                        pass
                     try:
-                        await client.copy_message(
+                        await client.USER.copy_message(
                             chat_id=destination_chat[ID],
                             from_chat_id=source_chat[ID],
                             caption=messages.caption,
@@ -84,34 +97,18 @@ async def clone_medias(client: Bot, message: Message):
                             disable_notification=True
                         )
                     except FloodWait as e:
-                        time.sleep(e.x)
+                        await asyncio.sleep(e.x)
                     except Exception:
-                        await client.send_message(
-                            chat_id=message.chat.id,
-                            text=Presets.COPY_ERROR_TEXT,
-                            reply_to_message_id=message.message_id
-                        )
-                        await status_message.delete()
+                        # Clone error due to string session user is not an admin of the given destination chat !
+                        await msg1.delete()
+                        await msg.edit(Presets.COPY_ERROR_TEXT)
                         source_chat.pop(ID)
                         destination_chat.pop(ID)
                         return
     else:
-        await message.reply_text(
-            text=Presets.NOT_CONFIGURED,
-            reply_to_message_id=message.message_id
-        )
+        await message.reply_text(Presets.NOT_CONFIGURED)
         return
-    await message.reply_text(
-        text=Presets.FINISHED_TEXT,
-        reply_to_message_id=message.message_id,
-        parse_mode='html',
-        disable_web_page_preview=True
-    )
-    document.pop(f'{ID}')
-    video.pop(f'{ID}')
-    audio.pop(f'{ID}')
+    await msg1.edit(Presets.FINISHED_TEXT)
     source_chat.pop(ID)
     destination_chat.pop(ID)
-    await status_message.delete()
-    await client.USER.leave_chat(status_message.chat.id)
     return
