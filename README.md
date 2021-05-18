@@ -59,13 +59,10 @@ virtualenv -p python3 venv
 pip3 install -r requirements.txt
 python3 main.py
 ```
-**Bot Window**
-<br>
-<img src="/med/bot_process.jpeg" width="200">
 
-**Working**
+### ░▒▓ Bot working ▓▒░
 <br>
-<img src="/med/working_video.gif" width="200">
+<IMG SRC="https://telegra.ph/file/3f3e9045efbafbbff1bbc.mp4" width="200">
 
 ## ░▒▓ LICENSE ▓▒░
 <p align="left">
