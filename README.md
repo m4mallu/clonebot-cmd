@@ -62,7 +62,7 @@ python3 main.py
 
 ### ░▒▓ Bot working ▓▒░
 <br>
-<IMG SRC="https://telegra.ph/file/3f3e9045efbafbbff1bbc.mp4" width="200">
+<IMG SRC="https://telegra.ph/file/78de6af8f593c6a13eb09.gif" width="200">
 
 ## ░▒▓ LICENSE ▓▒░
 <p align="left">
