@@ -61,8 +61,10 @@ python3 main.py
 ```
 
 ### ░▒▓ Bot working ▓▒░
-<br>
-<IMG SRC="https://telegra.ph/file/78de6af8f593c6a13eb09.gif" width="200">
+
+<video width="120" height="240" controls autoplay>
+  <source src="https://telegra.ph/file/3f3e9045efbafbbff1bbc.mp4" type="video/mp4">
+</video>
 
 ## ░▒▓ LICENSE ▓▒░
 <p align="left">
@@ -75,14 +77,14 @@ python3 main.py
 ## ░▒▓ Credits ▓▒░
 <p align="left">
   <a href="https://github.com/pyrogram/pyrogram">
-    <img alt="Pyrogram" src ="https://i.imgur.com/BOgY9ai.png" width="104.75" height="32"/>
+    <img alt="Pyrogram" src ="https://docs.pyrogram.org/_static/pyrogram.png" width="104.75" height="32"/>
   </a>
 </p>
 <br>
 
-## ░▒▓ Creator ▓▒░
+## ░▒▓ Finally ▓▒░
 <p align="left">
   <a href="https://t.me/space4renjith">
-    <img alt="Renjith Mangal" src ="https://logodix.com/logo/1717728.jpg" width="150" />
+    <img alt="Renjith Mangal" src ="https://telegra.ph/file/1001b7b08b0e9c266f780.png" width="150" />
   </a>
 </p>
