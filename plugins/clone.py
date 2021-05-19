@@ -45,6 +45,17 @@ async def clone_medias(client: Bot, message: Message):
             source_chat.pop(ID)
             destination_chat.pop(ID)
             return
+        try:
+            await msg1.edit(
+                text=Presets.CLOSE_BTN_TXT,
+                reply_markup=InlineKeyboardMarkup(
+                    [[InlineKeyboardButton(text="🌀 CANCEL 🌀", callback_data="stop_clone")]]
+                    )
+            )
+        except FloodWait as e:
+            await asyncio.sleep(e.x)
+        except Exception:
+            pass
         async for user_message in client.USER.iter_history(source_chat[ID]):
             messages = await client.USER.get_messages(
                 source_chat[ID],
@@ -75,12 +86,6 @@ async def clone_medias(client: Bot, message: Message):
                                 uptime,
                                 current_time,
                                 update
-                            )
-                        )
-                        await msg1.edit(
-                            text=Presets.CLOSE_BTN_TXT,
-                            reply_markup=InlineKeyboardMarkup(
-                                [[InlineKeyboardButton(text="🌀 CANCEL 🌀", callback_data="stop_clone")]]
                             )
                         )
                         await asyncio.sleep(1)

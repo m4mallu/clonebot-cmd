@@ -62,9 +62,11 @@ python3 main.py
 
 ### ░▒▓ Bot working ▓▒░
 
-<video width="120" height="240" controls autoplay>
-  <source src="https://telegra.ph/file/3f3e9045efbafbbff1bbc.mp4" type="video/mp4">
-</video>
+<p align="left">
+  <a href="https://telegra.ph/file/3f3e9045efbafbbff1bbc.mp4" type="video/mp4">
+    <img alt="Renjith Mangal" src ="https://static.thenounproject.com/png/2862643-200.png" width="150" />
+  </a>
+</p>
 
 ## ░▒▓ LICENSE ▓▒░
 <p align="left">
