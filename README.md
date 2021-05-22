@@ -1,7 +1,7 @@
 # [Clone Bot](https://github.com/m4mallu/clonebot)
 
-#### A simple telegram bot can clone medias from any chat to your private chat 😍 <br>
-
+#### A simple telegram bot can clone medias from any chat to your private chat -cmd based 😍 
+<br>
 ### 🤘 𝙋𝙧𝙞𝙫𝙖𝙩𝙚 & 𝙋𝙪𝙗𝙡𝙞𝙘 𝙘𝙝𝙖𝙩𝙨 𝙨𝙪𝙥𝙥𝙤𝙧𝙩𝙚𝙙 - 𝘼𝙣𝙮𝙤𝙣𝙚 𝙘𝙖𝙣 𝙘𝙡𝙤𝙣𝙚 𝙢𝙚𝙙𝙞𝙖𝙨 𝙛𝙧𝙤𝙢 𝙖𝙣𝙮𝙬𝙝𝙚𝙧𝙚 𝙩𝙤 𝙮𝙤𝙪𝙧 𝙥𝙚𝙧𝙨𝙤𝙣𝙖𝙡 𝙘𝙝𝙖𝙩 🤘
 
 ### ░▒▓ Highlights of this Bot ▓▒░
@@ -36,7 +36,7 @@ TG_USER_SESSION - Run any userbot session maker (Mentioned above)
 ```
 ### ░▒▓ Deploy Easy Way: ▓▒░
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/m4mallu/clonebot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/m4mallu/clonebot-cmd)
 
 ### ░▒▓ Deploy Legendary Way: ▓▒░
 
