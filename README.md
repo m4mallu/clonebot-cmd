@@ -1,7 +1,10 @@
 # [Clone Bot](https://github.com/m4mallu/clonebot)
 
 #### A simple telegram bot can clone medias from any chat to your private chat -cmd based 😍 
+### 👉 cmd based design 👈
+#### CLONE BOT MAIN PAGE&nbsp;&nbsp;<a href="https://github.com/m4mallu/clonebot"><img alt="Renjith Mangal" src ="https://www.seekpng.com/png/full/97-971723_download-click-here-button-png-click-here-button.png" width="100" /></a>
 <br>
+
 ### 🤘 𝙋𝙧𝙞𝙫𝙖𝙩𝙚 & 𝙋𝙪𝙗𝙡𝙞𝙘 𝙘𝙝𝙖𝙩𝙨 𝙨𝙪𝙥𝙥𝙤𝙧𝙩𝙚𝙙 - 𝘼𝙣𝙮𝙤𝙣𝙚 𝙘𝙖𝙣 𝙘𝙡𝙤𝙣𝙚 𝙢𝙚𝙙𝙞𝙖𝙨 𝙛𝙧𝙤𝙢 𝙖𝙣𝙮𝙬𝙝𝙚𝙧𝙚 𝙩𝙤 𝙮𝙤𝙪𝙧 𝙥𝙚𝙧𝙨𝙤𝙣𝙖𝙡 𝙘𝙝𝙖𝙩 🤘
 
 ### ░▒▓ Highlights of this Bot ▓▒░
@@ -40,7 +43,7 @@ TG_USER_SESSION - Run any userbot session maker (Mentioned above)
 
 ### ░▒▓ Deploy Legendary Way: ▓▒░
 
-Create **config.py** with variables as given below [Refer sample.config](https://github.com/m4mallu/clonebot/blob/master/sample_config.py)
+Create **config.py** with variables as given below [Refer sample.config](https://github.com/m4mallu/clonebot-cmd/blob/master/sample_config.py)
 
 ```
 class Config(object):
