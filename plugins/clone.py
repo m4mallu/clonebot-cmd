@@ -56,7 +56,7 @@ async def clone_medias(client: Bot, message: Message):
             await asyncio.sleep(e.x)
         except Exception:
             pass
-        async for user_message in client.USER.iter_history(source_chat[ID]):
+        async for user_message in client.USER.iter_history(chat_id=source_chat[ID], reverse=True):
             messages = await client.USER.get_messages(
                 source_chat[ID],
                 user_message.message_id,
